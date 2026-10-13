@@ -1,0 +1,48 @@
+
+:host {
+  display: block;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.search {
+  margin-bottom: 1rem;
+}
+
+.search label {
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+.search input {
+  width: min(100%, 350px);
+  padding: 0.6rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+th:hover {
+  background-color: #e5e5e5;
+}

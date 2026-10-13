@@ -1,0 +1,47 @@
+<div class="search">
+  <label for="search">Sök kurs:</label>
+  <input
+    id="search"
+    type="text"
+    [(ngModel)]="searchText"
+    (ngModelChange)="filterCourses()"
+    placeholder="Sök på kurskod eller kursnamn"
+  />
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th (click)="changeSort('code')">
+        Kurskod
+        <span *ngIf="sortColumn === 'code'">
+          {{ sortAscending ? '▲' : '▼' }}
+        </span>
+      </th>
+      <th (click)="changeSort('coursename')">
+        Kursnamn
+        <span *ngIf="sortColumn === 'coursename'">
+          {{ sortAscending ? '▲' : '▼' }}
+        </span>
+      </th>
+      <th (click)="changeSort('progression')">
+        Progression
+        <span *ngIf="sortColumn === 'progression'">
+          {{ sortAscending ? '▲' : '▼' }}
+        </span>
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let course of filteredCourses">
+      <td>{{ course.code }}</td>
+      <td>{{ course.coursename }}</td>
+      <td>{{ course.progression }}</td>
+    </tr>
+
+    <tr *ngIf="filteredCourses.length === 0">
+      <td colspan="3">Inga kurser hittades.</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,23 @@
+@use '../../../styles/theme' as *;
+
+footer {
+    background-color: $navFootColor;
+    padding: 0.5em 1em;
+    font-size: 0.6em;
+    display: grid;
+    grid-row: auto;
+    grid-template-columns: 1fr 1fr;
+
+    #footLeft {
+        grid-row: 1;
+        grid-column: 1/2;
+        align-content: center;
+    }
+
+    #footLeft #copyright{font-size: 0.7em; margin-top: 2%;}
+    #footLeft p {padding-left: 10px;}
+
+    @media (min-width: 700px) {
+        font-size: 75%;
+    }
+}
