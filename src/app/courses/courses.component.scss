@@ -1,48 +1,72 @@
 
+@use '../../styles/theme' as *;
+
 :host {
   display: block;
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem;
 }
 
 .search {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .search label {
-  margin-right: 0.75rem;
-  font-weight: bold;
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
 }
 
 .search input {
-  width: min(100%, 350px);
-  padding: 0.6rem;
-  border: 1px solid #aaa;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 0.65rem 0.75rem;
+  color: $bodyFont;
+  background-color: white;
+  border: 1px solid $border;
   border-radius: 4px;
+}
+
+.search input:focus-visible {
+    background-color: $searchAlt;
+    color: white;
+}
+
+.search input::placeholder {
+  color: $focus-color;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+  background-color: white;
 }
 
-th,
-td {
+th, td {
   padding: 0.75rem;
-  border: 1px solid #ddd;
+  border: 1px solid $border;
   text-align: left;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: $mainSectionColor;
+  color: $h2Font;
+  font-family: 'Gabriela', serif;
+  font-weight: 400;
   cursor: pointer;
 }
 
 tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: $tblAlt;
 }
 
-th:hover {
-  background-color: #e5e5e5;
+tbody tr:hover {
+  background-color: $tblHover;
+}
+
+th:focus-visible {
+  outline: 2px solid $focus-color;
+  outline-offset: -3px;
 }

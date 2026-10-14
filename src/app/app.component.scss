@@ -1,17 +1,14 @@
 @use '../styles/theme' as *;
 
 .header{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
     background-color: $navFootColor;
-    margin: 0;
     padding: 0.7em 1em;
+
     h1{
-        grid-column: 1;
         color: $h1Font;
         font-family: 'Gabriela', serif;
         font-size: 1.4em;
+        margin: 0;
     }
     @media (min-width: 700px) {
         padding: 1em 1.5em;
@@ -20,4 +17,10 @@
             font-size: 1.6em;
         }
     }
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    padding: 1.5rem 1rem;
 }

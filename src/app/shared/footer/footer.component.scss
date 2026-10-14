@@ -2,20 +2,26 @@
 
 footer {
     background-color: $navFootColor;
+    color: $bodyFont;
     padding: 0.5em 1em;
     font-size: 0.6em;
-    display: grid;
-    grid-row: auto;
-    grid-template-columns: 1fr 1fr;
 
-    #footLeft {
-        grid-row: 1;
-        grid-column: 1/2;
-        align-content: center;
+    #footerContent {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;      
     }
 
-    #footLeft #copyright{font-size: 0.7em; margin-top: 2%;}
-    #footLeft p {padding-left: 10px;}
+    #footerContent h2 {
+        margin: 0 0 0.5rem;
+        color: $h1Font;
+        font-family: 'Gabriela', serif;
+        font-size: 1.1rem;
+        font-weight: 400;
+}
+
+    #footerContent #copyright{font-size: 0.7em; margin-top: 2%;}
+    #footerContent p {padding-left: 10px;}
 
     @media (min-width: 700px) {
         font-size: 75%;
