@@ -3,8 +3,8 @@
 footer {
     background-color: $navFootColor;
     color: $bodyFont;
-    padding: 0.5em 1em;
-    font-size: 0.6em;
+    padding: 1rem;
+    font-size: 0.9em;
 
     #footerContent {
         width: 100%;
@@ -13,17 +13,37 @@ footer {
     }
 
     #footerContent h2 {
-        margin: 0 0 0.5rem;
         color: $h1Font;
         font-family: 'Gabriela', serif;
         font-size: 1.1rem;
         font-weight: 400;
+    }
+
+    #footerContent p {
+        margin: 0.35rem 0;
+        font-size: 0.8rem
+    }
+
+    #footerContent #copyright {
+        margin-top: 0.75rem;
+        font-size: 0.8rem;
+    }
 }
 
-    #footerContent #copyright{font-size: 0.7em; margin-top: 2%;}
-    #footerContent p {padding-left: 10px;}
+@media (max-width: 600px) {
+    footer {
+        padding: 0.5rem 1rem;
+    }
 
-    @media (min-width: 700px) {
-        font-size: 75%;
+    #footerContent h2 {
+        margin-bottom: 0.25rem;
+    }
+
+    #footerContent p {
+        margin: 0.15rem 0;
+    }
+
+    #copyright {
+        margin-top: 0.4rem;
     }
 }

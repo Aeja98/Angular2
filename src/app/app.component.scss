@@ -8,13 +8,14 @@
         color: $h1Font;
         font-family: 'Gabriela', serif;
         font-size: 1.4em;
-        margin: 0;
     }
     @media (min-width: 700px) {
-        padding: 1em 1.5em;
+        padding: 1.5rem 1rem;
         h1 {
-            margin: 0.5em 0 1em 0.5em;
             font-size: 1.6em;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto; 
         }
     }
 }
