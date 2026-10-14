@@ -1,39 +1,103 @@
-# DT208G Programmering i TypeScript
-## Moment 3: Angular I
+# Ramschema
+## Moment 4: Angular II
 
-En webbsida skapad för att användare ska kunna konvertera värden till andra måtenheter samt att jag skulle få grundläggande förståelse för Angular och dess använding för att skapa webbapplikationer.
+En webbplats skapad med Angular där användaren kan söka bland och sortera kurser från Mittuniversitetets ramschema. Kursinformationen hämtas från ett externt JSON-API och presenteras i en tabell.
 
-## Länk
-En liveversion finns tillgänglig här:
+Webbplats: 
 
-## Egenskaper 
+## Funktioner
 
-- Konvertera värden mellan enheter (t.ex. meter till fot, celsius till fahrenheit, osv.)
-- Växla mellan konverteringsriktningar med visuella switches (find correct word later)
-- Responsiv design som funkar för olika skärmstorlekar
-- Återanvändbar resultatkomponent som visar konverterings resultaten
+- Hämtar kursinformation från ett externt JSON-API
+- Visar kurser i en tabell med kurskod, kursnamn och progression
+- Sortering av kurser efter kurskod, kursnamn och progression
+- Möjlighet att sortera i både stigande och fallande ordning
+- Sökfunktion som filtrerar kurser direkt medan användaren skriver
+- Sökning efter både kurskod och kursnamn
+- Meddelande visas om inga kurser matchar sökningen
+- Responsiv layout anpassad för olika skärmstorlekar
 
-## Verktyg
+## Tekniker
 
-Webbplatsen byggdes med hjälp av följande:
+Projektet är byggt med:
 
-- Angular (v 19.2.9) — framework
-- TypeScript — programmering
-- SCSS — styling
-- HTML — angular's komponent mallar
-- Font Awesome — ikoner
+- Angular
+- TypeScript
+- HTML
+- SCSS
+- Angular Router
+- Angular Forms / `ngModel`
+- HttpClient för att hämta data från ett API
+- RxJS och Observable för hantering av asynkrona anrop
+- Komponentbaserad struktur
+- Netlify för publicering
 
-## Användning
+## Komponenter
 
-#### För att starta en lokal server:
-```bash
+Projektet använder följande centrala delar:
+
+- `AppComponent` innehåller webbplatsens grundläggande layout med sidhuvud, huvudinnehåll och sidfot.
+- `CourseComponent` hämtar och presenterar kursinformationen samt hanterar sökning och sortering.
+- `FooterComponent` visar kontaktinformation och copyright i sidfoten.
+- `CourseService` ansvarar för att hämta kursinformationen från JSON-API.
+- `Course` ett TypeScript-interface som beskriver strukturen för ett kursobjekt.
+
+## Installation och körning
+
+För att köra projektet lokalt behöver du ha Node.js och Angular CLI installerade.
+
+1. Klona projektet från GitHub:
+```
+git clone https://github.com/Aeja98/Angular2.git
+```
+
+2. Gå till projektmappen:
+```
+cd Angular2
+```
+
+3. Installera projektets beroenden:
+```
+npm install
+```
+
+4. Starta utvecklingsservern:
+```
 ng serve
 ```
-  - Öppna webbläsaren och navigera till `http://localhost:4200/`. Applikationen laddas om automatiskt när du ändrar någon av källfilerna.
-<br> <br>
 
-#### För att bygga projektet:
-```bash
-ng build
+5. Öppna webbläsaren och gå till:
+http://localhost:4200/
+
+## Filstruktur
 ```
-  - Detta kommer att kompilera projektet och lagrar filerna i `dist/` mappen.
+Angular2/
+├── public/
+├── src/
+│   ├── app/
+│   │   ├── courses/
+│   │   │   ├── courses.component.html
+│   │   │   ├── courses.component.scss
+│   │   │   └── courses.component.ts
+│   │   ├── models/
+│   │   │   └── course.ts
+│   │   ├── services/
+│   │   │   └── course.service.ts
+│   │   ├── shared/
+│   │   │   └── footer/
+│   │   ├── app.component.html
+│   │   ├── app.component.scss
+│   │   ├── app.component.ts
+│   │   ├── app.config.ts
+│   │   └── app.routes.ts
+│   ├── styles/
+│   │   ├── _fonts.scss
+│   │   └── _theme.scss
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.scss
+├── angular.json
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+└── README.md
+```
