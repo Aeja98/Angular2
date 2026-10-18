@@ -3,7 +3,7 @@
 
 En webbplats skapad med Angular där användaren kan söka bland och sortera kurser från Mittuniversitetets ramschema. Kursinformationen hämtas från ett externt JSON-API och presenteras i en tabell.
 
-Webbplats: 
+Webbplats: https://moment4angular2.netlify.app/
 
 ## Funktioner
 
